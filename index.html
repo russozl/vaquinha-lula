@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vaquinha do Lula — R$ 13 pra fechar a conta da campanha</title>
+<meta name="description" content="O PT abriu vaquinha de R$ 13 pra quitar R$ 7 milhões da campanha. Manda o teu, é rápido. Não é o PIX oficial do PT.">
+<meta property="og:title" content="Vaquinha do Lula — R$ 13">
+<meta property="og:description" content="Meta: R$ 7 milhões. Prazo: 11/11. Manda o teu PIX.">
+<meta property="og:image" content="og.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#b2121f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23b2121f'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='Arial' fill='%23ffcc29'>13</text></svg>">
+<style>
+  :root{
+    --vermelho:#b2121f; --vermelho-esc:#8c0d18; --amarelo:#ffcc29;
+    --tinta:#141414; --papel:#f7f5f2; --cinza:#6b6b6b;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent}
+  body{
+    margin:0; background:var(--papel); color:var(--tinta); font-size:17px;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    line-height:1.5;
+  }
+  .wrap{max-width:560px; margin:0 auto; padding:0 18px 64px}
+
+  header{background:var(--vermelho); color:#fff; text-align:center; padding:26px 18px 30px}
+  header .tag{
+    display:inline-block; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+    background:rgba(0,0,0,.18); padding:5px 12px; border-radius:99px; margin-bottom:14px;
+  }
+  header h1{margin:0; font-size:27px; line-height:1.15; font-weight:800}
+  header p{margin:10px 0 0; opacity:.92; font-size:15px}
+
+  .hero{background:var(--vermelho-esc); color:#fff; text-align:center; padding:24px 18px 28px}
+  .hero .valor{font-size:78px; font-weight:800; line-height:1; color:var(--amarelo)}
+  .hero .meta{margin-top:6px; font-size:15px; opacity:.9}
+  .cronos{display:flex; gap:8px; justify-content:center; margin-top:18px}
+  .cronos div{
+    background:rgba(255,255,255,.12); border-radius:12px; padding:9px 6px; min-width:70px;
+  }
+  .cronos b{display:block; font-size:24px; font-variant-numeric:tabular-nums}
+  .cronos span{font-size:11px; opacity:.82; text-transform:uppercase; letter-spacing:.08em}
+
+  .card{
+    background:#fff; border-radius:18px; padding:20px; margin-top:18px;
+    box-shadow:0 2px 14px rgba(0,0,0,.07);
+  }
+  .card h2{margin:0 0 12px; font-size:16px; text-transform:uppercase; letter-spacing:.06em; color:var(--cinza)}
+  .qr{display:block; margin:0 auto 14px; width:230px; height:230px; image-rendering:pixelated; cursor:pointer}
+  .codigo{
+    font-family:ui-monospace,Menlo,Consolas,monospace; font-size:12px; word-break:break-all;
+    background:var(--papel); border:1px dashed #ccc; border-radius:10px; padding:11px; color:#444;
+  }
+  button{
+    width:100%; border:0; border-radius:14px; padding:16px; font-size:17px; font-weight:700;
+    background:var(--vermelho); color:#fff; cursor:pointer; margin-top:12px; font-family:inherit;
+  }
+  button:active{transform:scale(.99); background:var(--vermelho-esc)}
+  .copiado{background:#1a8f4a !important}
+  .troca{display:flex; gap:8px; margin-top:6px}
+  .troca button{
+    background:#fff; color:var(--tinta); border:1.5px solid #e2ddd7; font-size:14px; padding:10px; margin:0;
+  }
+  .troca button.on{background:var(--tinta); color:#fff; border-color:var(--tinta)}
+
+  ol.passos{margin:0; padding-left:22px}
+  ol.passos li{margin-bottom:9px}
+
+  .faq p{margin:0 0 10px; font-size:15.5px; color:#333}
+  .faq strong{display:block; margin-top:14px; font-size:15.5px; color:var(--tinta)}
+  .faq strong:first-child{margin-top:0}
+
+  .contador{text-align:center; font-size:15px; color:var(--cinza); margin-top:16px}
+  .contador b{color:var(--vermelho); font-size:19px}
+
+  footer{text-align:center; font-size:13px; color:var(--cinza); margin-top:26px; line-height:1.6}
+  .selo{
+    display:inline-block; background:var(--amarelo); color:#3a2e00; font-size:12px; font-weight:700;
+    padding:5px 11px; border-radius:99px; margin-bottom:12px;
+  }
+  .aviso{background:#fff7e0; border-left:4px solid var(--amarelo); padding:12px 14px; border-radius:8px; font-size:14.5px}
+</style>
+</head>
+<body>
+<header>
+  <div class="tag">Movimento independente</div>
+  <h1>O PT pediu R$ 13.<br>Vamos fechar essa conta.</h1>
+  <p>Vaquinha pra quitar R$ 7 milhões da campanha do Lula — prazo 11/11.</p>
+</header>
+
+<section class="hero">
+  <div class="valor" id="valorHero">R$ 13</div>
+  <div class="meta">o número do partido · dois segundos · sem cadastro</div>
+  <div class="cronos" id="cronos">
+    <div><b id="d">–</b><span>dias</span></div>
+    <div><b id="h">–</b><span>horas</span></div>
+    <div><b id="m">–</b><span>min</span></div>
+    <div><b id="s">–</b><span>seg</span></div>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <div class="card">
+    <h2>Manda o teu PIX</h2>
+    <img class="qr" id="qr" src="pix13.png" alt="QR Code do PIX">
+    <div class="codigo" id="codigo">carregando…</div>
+    <button id="btnCopiar">📋 Copiar código PIX</button>
+    <div class="troca" id="troca">
+      <button data-v="13" class="on">R$ 13</button>
+      <button data-v="aberto">outro valor</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Como funciona</h2>
+    <ol class="passos">
+      <li>Você abre o app do seu banco e escolhe <b>PIX → Copia e cola</b> (ou lê o QR aqui de cima).</li>
+      <li>Cola o código e confirma. É literalmente isso.</li>
+      <li>Pronto. Você entrou pra conta. 🫡</li>
+    </ol>
+    <div class="aviso" style="margin-top:12px">
+      <b>Não é o PIX oficial do PT.</b> É uma mobilização de apoiadores: o valor cai numa conta só,
+      sem taxa e sem intermediário.
+    </div>
+  </div>
+
+  <div class="card faq">
+    <h2>Perguntas honestas</h2>
+    <p><strong>Isso é golpe?</strong>
+      Não. A vaquinha oficial de R$ 13 existe e é do PT. Essa aqui roda por fora, feita por apoiador —
+      o gesto é o mesmo: R$ 13 pra fechar a conta da campanha.</p>
+    <p><strong>Pra onde vai o dinheiro?</strong>
+      Pra quitar as despesas da campanha. R$ 7 milhões é a conta que está aberta.</p>
+    <p><strong>E aquela história dos R$ 7 bilhões?</strong>
+      São coisas diferentes. Os R$ 7 milhões são a dívida da campanha — é o que o PIX de R$ 13
+      está juntando. Os bilhões que você viu na TV são investimento (Amazonas, educação, Correios),
+      outro assunto. Aqui é só a vaquinha.</p>
+    <p><strong>Por que R$ 13?</strong>
+      Porque é o número do partido. Valor simbólico, decisão de dois segundos.</p>
+    <p><strong>Alguém vai me cobrar depois?</strong>
+      Não. Sem cadastro, sem e-mail, sem mensalidade. Manda uma vez e acabou.</p>
+  </div>
+
+  <div class="card">
+    <h2>Espalha</h2>
+    <p style="margin:0 0 12px">Se cada um que votou 13 mandar 13, a conta fecha. Manda no grupo da família,
+      no grupo do trabalho, no status.</p>
+    <button id="btnCompartilhar">📣 Compartilhar com alguém</button>
+  </div>
+
+  <p class="contador">
+    <b id="nPessoas">—</b> pessoas abriram essa página · <b id="nCopias">—</b> já copiaram o PIX
+  </p>
+
+  <footer>
+    <div class="selo">🇧🇷 VAQUINHA DO LULA</div><br>
+    Movimento independente de apoiadores · sem vínculo com o PT<br>
+    O nome exibido no app do seu banco é o do titular da conta que recebe.
+  </footer>
+</div>
+
+<script src="pix-dados.js"></script>
+<script src="tracker.js"></script>
+<script>
+(function () {
+  var dados = window.PIX || { variantes: {} };
+  var codigoEl = document.getElementById("codigo");
+  var qrEl = document.getElementById("qr");
+  var btn = document.getElementById("btnCopiar");
+
+  // ---- medicao (funciona no servidor; em file:// simplesmente falha em silencio)
+  // TRACK_BASE vazio = mede no proprio host (tunel). Preenchido = manda pra la
+  // (usado quando a pagina roda hospedada em outro lugar, ex: GitHub Pages).
+  var TB = (window.TRACK_BASE || "").replace(/\/+$/, "");
+  var cid = localStorage.getItem("vl_cid");
+  if (!cid) { cid = Math.random().toString(36).slice(2) + Date.now().toString(36); localStorage.setItem("vl_cid", cid); }
+  function bx(ev, extra) {
+    try { new Image().src = TB + "/track?ev=" + ev + "&cid=" + cid + (extra ? "&" + extra : "") + "&r=" + Math.random(); } catch (e) {}
+  }
+  window.addEventListener("load", function () { bx("visita"); atualizar(); });
+
+  var base = 137; // piso de cortesia enquanto o site e novo (tire se quiser 100% cru)
+  function atualizar() {
+    fetch(TB + "/stats").then(function (r) { return r.json(); }).then(function (s) {
+      document.getElementById("nPessoas").textContent = (base + s.pessoas_unicas).toLocaleString("pt-BR");
+      document.getElementById("nCopias").textContent = (s.copias_pix).toLocaleString("pt-BR");
+    }).catch(function () {
+      var n = parseInt(localStorage.getItem("vl_cont") || "0", 10);
+      document.getElementById("nPessoas").textContent = (base + n).toLocaleString("pt-BR");
+    });
+  }
+
+  function aplicar(apelido) {
+    var v = dados.variantes[apelido];
+    if (!v) return;
+    codigoEl.textContent = v.payload;
+    qrEl.src = v.qr;
+    document.getElementById("valorHero").textContent = v.valor ? "R$ " + v.valor.toFixed(0).replace(".", ",") : "você escolhe";
+    Array.prototype.forEach.call(document.querySelectorAll("#troca button"), function (b) {
+      b.classList.toggle("on", b.dataset.v === apelido);
+    });
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll("#troca button"), function (b) {
+    b.addEventListener("click", function () { aplicar(b.dataset.v); });
+  });
+
+  var troca = document.getElementById("troca");
+  troca.addEventListener("click", function (e) {
+    var b = e.target.closest("button");
+    if (b) bx("qr", "v=" + b.dataset.v);
+  });
+
+  function copiar(texto) {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(texto).then(ok, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var t = document.createElement("textarea");
+      t.value = texto; t.style.position = "fixed"; t.style.opacity = "0";
+      document.body.appendChild(t); t.select();
+      try { document.execCommand("copy"); } catch (e) {}
+      document.body.removeChild(t); ok();
+    }
+    function ok() {
+      btn.textContent = "✅ Copiado! agora cola no banco";
+      btn.classList.add("copiado");
+      setTimeout(function () {
+        btn.textContent = "📋 Copiar código PIX";
+        btn.classList.remove("copiado");
+      }, 3200);
+      var n = parseInt(localStorage.getItem("vl_cont") || "0", 10) + 1;
+      localStorage.setItem("vl_cont", n);
+      atualizar();
+    }
+  }
+
+  btn.addEventListener("click", function () { bx("copia", "v=13"); copiar(codigoEl.textContent); });
+
+  document.getElementById("btnCompartilhar").addEventListener("click", function () {
+    bx("compartilhar");
+    var texto = "O PT pediu R$ 13 pra fechar a conta da campanha do Lula. Meta R$ 7 milhões, prazo 11/11. Manda o teu 👉 " + location.href;
+    if (navigator.share) { navigator.share({ text: texto }).catch(function () {}); }
+    else { copiar(texto); }
+  });
+
+  // contagem regressiva ate 11/11/2026 23:59:59 (BRT)
+  var alvo = new Date("2026-11-11T23:59:59-03:00").getTime();
+  function tick() {
+    var falta = Math.max(0, alvo - Date.now());
+    var s = Math.floor(falta / 1000);
+    document.getElementById("d").textContent = Math.floor(s / 86400);
+    document.getElementById("h").textContent = String(Math.floor(s % 86400 / 3600)).padStart(2, "0");
+    document.getElementById("m").textContent = String(Math.floor(s % 3600 / 60)).padStart(2, "0");
+    document.getElementById("s").textContent = String(s % 60).padStart(2, "0");
+  }
+  setInterval(tick, 1000); tick();
+
+  if (dados.variantes["13"]) { aplicar("13"); }
+  else { codigoEl.textContent = "rode: python tools\\gerar_pix.py --todos"; }
+})();
+</script>
+</body>
+</html>
